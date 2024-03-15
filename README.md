@@ -1,6 +1,6 @@
 # GOREMOVALS
 
-![Tech Stack](/resources/img/tech-stack-diagram.svg)
+![Tech Stack](resources/img/tech-stack-diagram.svg)
 
 ## Frontend
 
