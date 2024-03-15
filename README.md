@@ -9,7 +9,7 @@
 - Driver
 - Customer
 
-### www
+### Web
 - Administrator (Manager)
 - Customer
 
@@ -47,7 +47,7 @@
    5. Duration
    6. Route & Stops
 
-### Admin (Manager) Role (Web)
+### Administrator (Manager) Role (Web)
 1. **Dashboard**
    1. Calendar
    2. Unassigned Trips
@@ -179,7 +179,7 @@
   - Duration: /management/duration
   - Route & Stops: /management/route-stops
 
-### Admin (Manager) Role (Web)
+### Administrator (Manager) Role (Web)
 - **Dashboard**: /dashboard
   - Calendar: /dashboard/calendar
   - Unassigned Trips: /dashboard/unassigned-trips
@@ -222,6 +222,8 @@
 
 ## Questions
 - What does each action on the Trips table mean?
-- Is there any integration with bank accounts or payment system?
+- Is there any integration with bank accounts or payment systems?
 - Partner Details -> Vehicle Details -> Status (Who is managing this status?)
-- Questions about odometer (When, who, and how is managing this value?)
+- Questions about the odometer (When, who, and how is managing this value?)
+- Can the Administrator role delete another administrator role user?
+
