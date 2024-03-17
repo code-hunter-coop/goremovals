@@ -13,6 +13,9 @@
 - Administrator (Manager)
 - Customer
 
+### Mobile Web
+- Customer
+
 ## Roles
 - Administrator (Manager)
 - Customer
@@ -22,14 +25,14 @@
 ## Pages
 
 ### Customer Portal (App, Web, Mobile Web)
-1. **Login** (App, Web)
-2. **SignUp** (App, Web)
-3. **Forgot Password** (App, Web)
-4. **Stops** (App, Web)
+1. **Login**
+2. **SignUp**
+3. **Forgot Password**
+4. **Stops**
    1. Map with polylines
    2. List of Stops Multi GeoLocationPicker (Pick-Up,  Drop-off) 
    3. Vehicle type (PopUp window)
-5. **Trip Options** (App, Web)
+5. **Trip Options**
    1. Floors
    2. Helpers
    3. Shuttles
@@ -37,22 +40,22 @@
    5. Time
    6. Coupon Code
    7. Notes
-6. **Cost Breakdown** (App, Web)
-   1. Basefare 
+6. **Cost Breakdown**
+   1. Base Fare 
    2. Cost per KM
    3. Options
    4.  Cupon
    5.  Total
    6.  Accept (redirection to Login or SignUp page)
    7.  Decline (PopUp window with reasons)
-7.  **Confirmation** (App, Web)
+7.  **Confirmation**
    1. List of Stops
    2. Options
    3. Date
    4. Cost
    5. Accept (Booking has been confirmed)
    6. Decline
-8.  **Bookings Management** (App, Web)
+8.  **Bookings Management**
     1. List Bookings with filters
        1. Id
        2. Time (start time)
@@ -114,7 +117,7 @@
        9. TotalVehciles
        10. BankVarification
        11. Action
-5. **PartnerDetails**
+5. **Partner Details**
    1. Name
    2. email
    3. phone
@@ -122,7 +125,7 @@
    5. BankAccount
    6. BankAccount valid
    7. Documents
-6. **DriverDetalis**
+6. **Driver Details**
    1. Name
    2. email
    3. phone
@@ -132,7 +135,7 @@
    7. ShowTransactons
    8. BlockDriver
    9. OperatingProvinces
-7. **VehicleDetails**
+7. **Vehicle Details**
    1. Id
    2. Staus (Waiting)
    3. Driver
@@ -152,13 +155,13 @@
        2. Partner
        3. Status (Active)
        4. Payout (Payout)
-       5. TotalTrips
-       6. StartDate
-       7. EndDate
-       8. DueDate
+       5. Total Trips
+       6. Start Date
+       7. End Date
+       8. Due Date
        9. Dedications
-       10. TotalAmount
-9. **PayoutDetalis**
+       10. Total Amount
+9. **Payout Details**
    1.  ParthnerContacts
    2.  ListRemovalTrips
 10. **Make Payment**
@@ -170,19 +173,19 @@
           2.  Removal Id
           3.  Status ( Paid)
           4.  Rates (???)
-          5.  InvoceDate
+Invoice Date
           6.  Cupon
           7.  Discount
           8.  Amount
-          9.  ViewInvoce
+          9.  View Invoice
           10. Action
-12. **InvoiceDetails**
+12. **Invoice Details**
     1.  Unknown Format
 13. **Customers**
      1. Filters
      2. List
         1. Id
-        2. AddedDateTime
+        2. Added Date Time
         3. Name
         4. Status (Active, Inactive)
         5. Email
@@ -203,15 +206,15 @@
     2.  LastName
     3.  Role
     4.  Email
-    5.  OldPassword
-    6.  NewPassword
+    5.  Old Password
+    6.  New Password
 16. **Rate**
      1. Filters
      2. List of rates
         1. Id
         2. Name
         3. Status
-        4. Basefare
+        4. Base Fare
         5. Cost per km
         6. TimeTrashold
         7. Cost per hr
@@ -222,7 +225,7 @@
 17. **RateCreateEdit**
     1.  Name
     2.  Status
-    3.  Basefare
+    3.  Base Fare
     4.  Cost per km
     5.  TimeTrashold
     6.  Cost per hr
@@ -348,7 +351,7 @@
 ### Entities
 - User
 - Role
-- Organisation
+- Organization
 - Stop
     - GeoLocation
     - Pick-up
@@ -441,7 +444,7 @@
 
 ## Endpoints
 
-1. **Customer Role (Customer Portal) (App, Web)**
+1. **Customer Role (Customer Portal)**
    - **Login**: /login
    - **SignUp**: /signup
    - **Stops**: /stops
@@ -507,11 +510,17 @@
 - Google API
 - Apple API
 
+## Suggestions
+- The terms "Fleet Owner" and "Partner" are equally used in business logic and app views. May we use only the "Partner" term to simplify app logic? 
+- The terms "Removal", "Trips", "Removal Trips" and "Bookings" are equally used in business logic and app views. May we use only one term to simplify app logic? Our suggestion is also to think about the common term "Order".
+- The role "Administrator" has all the characteristics of the "Manager" role. Maybe it's better to use this role name.
+
 ## Questions
 **Customer**
-- Page "List of stops". Does the customer choose the difference between pick-up and drop-off or does it all have the same meaning for the trip? Are the stop sequences calculated by the business logic or just how the customer chooses?
-- Page "Cost breakdown". What is the logic under all calculations?
-- Page "Booking management". Time - is it start trip time? Origin - is it the start location? Vaehicle - is this maxWeight or vaehicle type? This parameter is absent on the Vehicles page. Where are this parameter located?
+- Page "List of stops". Does the customer choose the difference between pick-up and drop-off or does it all have the same meaning for the trip? Are the stop sequences calculated by the business logic or only by customer choices?
+- Page "Enter trip options" field "Shuttles". What does this mean?
+- Page "Cost breakdown". Do the calculation options depend only on "Vehicle Type" from "Rate" data?
+- Page "Booking management". Time - is it start trip time? Origin - is it the start location? Vehicle - is this Vehicle Type?
 **Admin Portal**
 - Page "Dashboard" -> Edit Removal Trips -> Change stops statuses. What about other states? Who and when changing them?
 - Page Partners -> Partner Details -> Driver -> block (blocked, unblocked). What does this action do? Does this make the driver inactive for the partner to choose in the future or something else? 
@@ -522,9 +531,11 @@
 - Page Settings ->Settings -> UserDetails -> Action "Set Password". If these options are for each user in the list how can you know the old password? Usually just set a new password.
 - Page Settings ->Settings -> CompanyDetails -> two times field State. Is it better to change one of them to country? 
 
-
-
-- Is there any integration with bank accounts or payment systems?
-- Partner Details -> Vehicle Details -> Status (Who is managing this status?)
+**Business Logic**
+- By deleting objects ("Users", "Vehicles" etc.) do you want to permanently delete this data from all tables without the opportunity to check them in the future or do you want to change the status to "inactive" to have the opportunity to check this data in the future?
+- Does the program need extra logik for refounding?
+- Does the client can pay with different parts for one "Trip"? Are there different types of payment like "payment before the trip", "payment after the trip" etc.?
+- Is there any mechanism or API for integration with bank accounts or payment systems?
 - Questions about the odometer (When, who, and how is managing this value?)
-- Can the Administrator role delete another administrator role user?
+- Time Trash Hold - who, when and how can use this parameter?
+- Can a user with the administrator (manager) role delete another user with the administrator (manager) role?
