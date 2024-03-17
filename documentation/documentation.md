@@ -122,7 +122,11 @@
   - Bank Account
 - Bank Account
 - Driver: User
+  - DabeOfBirth
+  - ShowTransacions
   - Driver License
+  - DriverStatus
+- DriverStauts (Blocked, Verified)
 - Trip Status (Pending, Pay Now, Approved, View Invoice, Complete, In Progress)
 - GeoLocation
 - Vehicle
