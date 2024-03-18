@@ -583,6 +583,7 @@
 - Page Settings ->Settings -> CompanyDetails -> two times field State. Is it better to change one of them to country?
 **Partner Portal**
 - Page Trip -> Details. Fields Categories and Description. Who, When and How fill these fields with data?
+![Trip details](/resources/img/trip-details.jpg)
 
 **Business Logic**
 - By deleting objects ("Users", "Vehicles" etc.) do you want to permanently delete this data from all tables without the opportunity to check them in the future or do you want to change the status to "inactive" to have the opportunity to check this data in the future?
