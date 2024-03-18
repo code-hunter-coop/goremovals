@@ -580,12 +580,14 @@
 - Page Invices -> Action View Invoice. Is there an example of the invoice?
 - Page Settings -> Users -> List column "Organisation". Is this a company? How many Organisations are there? Who and were managing them?
 - Page Settings ->Settings -> UserDetails -> Action "Set Password". If these options are for each user in the list how can you know the old password? Usually just set a new password.
-- Page Settings ->Settings -> CompanyDetails -> two times field State. Is it better to change one of them to country? 
+- Page Settings ->Settings -> CompanyDetails -> two times field State. Is it better to change one of them to country?
+**Partner Portal**
+- Page Trip -> Details. Fields Categories and Description. Who, When and How fill these fields with data?
 
 **Business Logic**
 - By deleting objects ("Users", "Vehicles" etc.) do you want to permanently delete this data from all tables without the opportunity to check them in the future or do you want to change the status to "inactive" to have the opportunity to check this data in the future?
 - Does the program need extra logik for refounding?
-- Does the client can pay with different parts for one "Trip"? Are there different types of payment like "payment before the trip", "payment after the trip" etc.?
+- Can the client pay with different parts for one "Trip"? Are there different types of payment like "payment before the trip", "payment after the trip" etc.?
 - Is there any mechanism or API for integration with bank accounts or payment systems?
 - Questions about the odometer (When, who, and how is managing this value?)
 - Time Trash Hold - who, when and how can use this parameter?
