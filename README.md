@@ -1,8 +1,8 @@
 ![Tech Stack](resources/img/tech-stack-diagram.svg)
 
 # Tech Stack
-- Business logic and REST API can be built using C# program language and modern cross-platform framework .Net. It has libraries to work with all types of databases and file structures so depending on the chosen production platform can be used by specific databases and file provider (PostgreSQL, MSSQl, MySql, CosmDb etc.).
-- Web and MobileWeb can be built also using C# program language and cross-platform .Net Blazor framework. All C# code can be located on-premises or on the cloud (the most popular platforms on the market are Azure and AWS).
+- Business logic and REST API can be built using C# program language and modern cross-platform framework .Net. It has libraries to work with all types of databases and file structures, so specific databases and file providers can be used depending on the chosen production platform (PostgreSQL, MSSQl, MySql, CosmDb etc.).
+- Web and MobileWeb can also be built using C# program language and cross-platform .Net Blazor framework. All C# code can be located on-premises or on the cloud (the most popular platforms on the market are Azure and AWS).
 
 # Frontend
 
